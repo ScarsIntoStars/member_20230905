@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MemberService {
 
@@ -22,4 +24,18 @@ public class MemberService {
     }
 
 
+    public boolean login(MemberDTO memberDTO) {
+        memberDTO = memberRepository.login(memberDTO);
+        System.out.println(memberDTO.getMemberEmail());
+        System.out.println(memberDTO.getMemberPassword());
+        if(memberDTO.getMemberEmail().equals(null)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public List members() {
+        return memberRepository.members();
+    }
 }

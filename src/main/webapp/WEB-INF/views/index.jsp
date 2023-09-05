@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Member Project</title>
+<%--    <link rel="stylesheet" href="/resources/css/main.css">--%>
 </head>
 <body>
     <h1>[ 멤버 프로젝트 ]</h1>

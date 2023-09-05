@@ -10,6 +10,14 @@
         values(#{memberEmail}, #{memberPassword}, #{memberName},#{memberBirth}, #{memberMobile})
     </insert>
 
+    <select id="login" parameterType="com.icia.member.dto.MemberDTO" resultType="com.icia.member.dto.MemberDTO">
+        select * from member_table where memberEmail=#{memberEmail} and memberPassword=#{memberPassword}
+    </select>
+
+    <select id="findAll" resultType="member">
+        select * from member_table
+    </select>
+
 </mapper>
 
 

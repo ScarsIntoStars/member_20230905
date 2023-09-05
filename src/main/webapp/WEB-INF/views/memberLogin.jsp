@@ -8,12 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <body>
-<h1>[ 멤버 프로젝트 ]</h1>
-<h3>[ memberLogin ]</h3>
-    <form>
-        이메일 : <input type="text" name="memberEmail">
-        비밀번호 : <input type="text" name=""
+    <h1>[ 멤버 프로젝트 ]</h1>
+    <h3>[ memberLogin ]</h3>
 
+    <form action="/login" method="post">
+        이메일 : <input type="text" name="memberEmail">
+        비밀번호 : <input type="text" name="memberPassword">
+        <input type="submit" value="로그인">
     </form>
 
 </body>
