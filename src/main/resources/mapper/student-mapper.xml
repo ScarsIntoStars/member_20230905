@@ -4,30 +4,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- namespace 반드시 작성! -->
-<mapper namespace="Student">
-    <insert id="save" parameterType="student"> <!-- parameterType="com.icia.student.dto.StudentDTO" -->
-        insert into student_table(studentNumber, studentName, studentMajor, studentMobile)
-        values(#{studentNumber}, #{studentName}, #{studentMajor}, #{studentMobile})
+<mapper namespace="Member">
+    <insert id="save" parameterType="com.icia.member.dto.MemberDTO"> <!-- parameterType="com.icia.student.dto.StudentDTO" -->
+        insert into member_table(memberEmail, memberPassword, memberName, memberBirth, memberMobile)
+        values(#{memberEmail}, #{memberPassword}, #{memberName},#{memberBirth}, #{memberMobile})
     </insert>
 
-    <select id="findAll" resultType="student">
-        select * from student_table
-    </select>
-
-    <select id="findById" parameterType="Long" resultType="student">
-        select * from student_table where id=#{id}
-    </select>
-
-    <update id="update" parameterType="student">
-        update student_table
-        set studentMajor = #{studentMajor}, studentMobile= #{studentMobile}
-        where id=#{id}
-    </update>
-
-    <delete id="delete" parameterType="student">
-        delete from student_table
-        where id=#{id}
-    </delete>
 </mapper>
 
 
