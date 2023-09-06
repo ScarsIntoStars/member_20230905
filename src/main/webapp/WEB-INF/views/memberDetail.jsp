@@ -14,7 +14,7 @@
 <h3>[ memberDetail ]</h3>
 
 <div class="container">
-  <div id="member-detail">
+  <div>
     <table class="table table-bordered">
       <tr>
         <td>id</td>
@@ -24,11 +24,11 @@
         <td>mobile</td>
       </tr>
       <tr>
-        <td>${member.id}</td>
-        <td>${member.memberEmail}</td>
-        <td>${member.memberName}</td>
-        <td>${member.memberBirth}</td>
-        <td>${member.memberMobile}</td>
+        <td>${memberDTO.id}</td>
+        <td>${memberDTO.memberEmail}</td>
+        <td>${memberDTO.memberName}</td>
+        <td>${memberDTO.memberBirth}</td>
+        <td>${memberDTO.memberMobile}</td>
       </tr>
     </table>
     <a href="/findAll">목록으로 돌아가기</a>
