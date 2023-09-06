@@ -12,5 +12,8 @@
     <a href="/login"> [ 로그인 ]</a>
     <a href="/findAll"> [ 회원목록 ]</a> <br>
 
+    로그인 이메일 : ${sessionScope.loginEmail} <br>
+    모델에 담은 이메일 : ${email} <br>
+
 </body>
 </html>

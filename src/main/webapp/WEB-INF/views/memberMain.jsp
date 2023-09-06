@@ -9,6 +9,11 @@
 <html>
 <head>
     <title>Title</title>
+    <%--세션의 값 꺼내기 --%>
+    로그인 이메일 : ${sessionScope.loginEmail}  <br>
+    모델에 담은 이메일 : ${email} <br>
+
+    <a href="/">index로 이동</a>
 </head>
 <body>
 

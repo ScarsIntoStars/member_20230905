@@ -30,7 +30,7 @@
                     <td>${member.memberName}</td>
                     <td>${member.memberBirth}</td>
                     <td>${member.memberMobile}</td>
-                    <td button
+<%--                    <td><a href="/findById=?id=${member.id}" method="get"></td>--%>
                     <br>
                 </tr>
             </c:forEach>

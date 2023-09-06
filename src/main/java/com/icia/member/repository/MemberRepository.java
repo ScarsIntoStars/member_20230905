@@ -18,8 +18,8 @@ public class MemberRepository {
     }
 
     public MemberDTO login(MemberDTO memberDTO) {
-        System.out.println(memberDTO.getMemberEmail());
-        System.out.println(memberDTO.getMemberPassword());
+//        System.out.println(memberDTO.getMemberEmail());
+//        System.out.println(memberDTO.getMemberPassword());
         return sql.selectOne("Member.login", memberDTO);
     }
 

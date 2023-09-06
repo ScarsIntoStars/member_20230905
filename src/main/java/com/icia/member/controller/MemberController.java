@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -39,9 +40,27 @@ public class MemberController {
     }
 
     @PostMapping("/login")
-    public String login(@ModelAttribute MemberDTO memberDTO){
-        memberService.login(memberDTO);
-        return "memberMain";
+    public String login(@ModelAttribute MemberDTO memberDTO, HttpSession session, Model model){
+     boolean result = memberService.login(memberDTO);
+        if(result == true) {
+            // 로그인 성공시 사용자의 이메일을 세션에 저장
+            session.setAttribute("loginEmail", memberDTO.getMemberEmail());
+            // 모델에 이메일 저장
+            model.addAttribute("email", memberDTO.getMemberEmail());
+            return "memberMain";
+        } else {
+            return "login";
+        }
+//        return "index";
+    }
+
+    @GetMapping("logout")
+    public String logout(HttpSession session){
+        // 해당 파라미터만 없앨 경우
+        session.removeAttribute("loginEmail");
+        // 세션 전체를 없앨 경우
+        // sesstion.invalidate();
+        return "redirect:/";
     }
 
     @GetMapping("/findAll")
