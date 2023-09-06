@@ -4,8 +4,12 @@
 <head>
     <title>Member Project</title>
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/resources/css/main.css">
+
 </head>
 <body>
+<%@include file="component/header.jsp"%>
+<%@include file="component/nav.jsp"%>
 <h1>[ 멤버 프로젝트 ]</h1>
 <h3>[ memberSave ]</h3>
 
@@ -17,5 +21,7 @@
     전화번호 : <input type="text" name="memberMobile"> <br>
     <input type="submit" value="전송">
 </form>
+<%@include file="component/footer.jsp"%>nc
+
 </body>
 </html>

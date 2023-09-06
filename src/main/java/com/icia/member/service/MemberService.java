@@ -42,7 +42,12 @@ public class MemberService {
          * */
 
     }
-    public List members() {
+    public List<MemberDTO> members() {
         return memberRepository.members();
+    }
+
+    public MemberDTO update(Long id) {
+        MemberDTO memberDTO = memberRepository.update(id);
+        return memberDTO;
     }
 }
