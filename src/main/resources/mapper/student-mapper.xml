@@ -22,6 +22,10 @@
         select * from member_table where id=#{id}
     </select>
 
+    <select id="findByEmail" parameterType="String" resultType="member">
+        select * from member_table where memberEmail=#{memberEmail}
+    </select>
+
 </mapper>
 
 

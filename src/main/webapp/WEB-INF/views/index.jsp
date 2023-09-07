@@ -11,11 +11,11 @@
 <%@include file="component/nav.jsp"%>
 <div class="row">
     <h1 class="text-center">[ 멤버 프로젝트 ]</h1>
+    <%--        <a class="btn btn-primary" href="/save" role="button">[ 회원가입 ]</a>--%>
+    <%--        <button class="btn btn-primary" type="submit"--%>
 </div>
 <div class="row">
     <div class="col">
-<%--        <a class="btn btn-primary" href="/save" role="button">[ 회원가입 ]</a>--%>
-<%--        <button class="btn btn-primary" type="submit"--%>
 
         <a href="/save" class="text-center"> [ 회원가입 ]</a>
     </div>

@@ -22,7 +22,7 @@
             <h3>[ memberLogin ]</h3>
 
             <form action="/login" method="post">
-                이메일 : <input type="text" name="memberEmail">
+                이메일 : <input type="text" name="memberEmail"> <br> <br>
                 비밀번호 : <input type="text" name="memberPassword">
                 <input type="submit" value="로그인">
             </form>

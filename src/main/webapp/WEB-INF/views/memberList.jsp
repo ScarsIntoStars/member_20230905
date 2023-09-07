@@ -50,6 +50,7 @@
                         <button class="btn btn-danger" onclick="delete_fn('${member.id}')">삭제</button>
                     </td>
 
+
                 </tr>
             </c:forEach>
       </table>

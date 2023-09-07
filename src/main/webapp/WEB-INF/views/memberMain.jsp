@@ -26,7 +26,7 @@
 <%@include file="component/nav.jsp"%>
         <h2>memberMain.jsp</h2>
         로그인이메일: ${sessionScope.loginEmail} <br>
-        model에 담은 이메일: ${email} <br>
+        model에 담은 이메일: '${email}' <br>
         <a href="/logout">로그아웃</a>
         <a href="/">index로 이동</a>
 

@@ -30,4 +30,8 @@ public class MemberRepository {
     public MemberDTO update(Long id) {
         return sql.selectOne("Member.update", id);
     }
+
+    public MemberDTO findByIdMemberEmail(String memberEmail) {
+        return sql.selectOne("memberFindByEmail", memberEmail);
+    }
 }

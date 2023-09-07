@@ -71,11 +71,26 @@ public class MemberController {
         return "memberList";
     }
 
+//    @GetMapping("/update")
+//    public String update(@RequestParam("id") Long id, Model model) {
+//        MemberDTO memberDTO = memberService.update(id);
+//        model.addAttribute("memberDTO", memberDTO);
+//        return "memberDetail";
+//    }
+
     @GetMapping("/update")
-    public String update(@RequestParam("id") Long id, Model model) {
-        MemberDTO memberDTO = memberService.update(id);
+    public String update(HttpSession session,Model model) {
+        // 세션에 저장된 이메일 꺼내기(sission이 String보다 크기 때문에 강제형변환)
+        String memberEmail = (String) session.getAttribute("loginEmail");
+        MemberDTO memberDTO = memberService.findMemberEmail(memberEmail);
         model.addAttribute("memberDTO", memberDTO);
-        return "memberDetail";
+        return "memberUpdate";
+    }
+
+    @PostMapping("/update")
+    public String update(@ModelAttribute MemberDTO memberDTO) {
+        memberService.update(memberDTO);
+        return "memberEmail";
     }
 
 }
